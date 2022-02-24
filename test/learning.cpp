@@ -38,10 +38,15 @@ int main() {
     // while (val <= j) {
     //     cout << val << endl;
     // }
-    int sum = 0, val = 0;
-    while (cin >> val) {
-        sum += val;
-    }
-    cout << sum << endl;
-    return sum;
+    // int sum = 0, val = 0;
+    // while (cin >> val) {
+    //     sum += val;
+    // }
+    // cout << sum << endl;
+    // return sum;
+
+    signed char c = -1;
+    int i = c;
+    cout << i << endl;
+
 }
