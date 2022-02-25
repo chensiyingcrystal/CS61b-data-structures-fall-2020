@@ -1,3 +1,5 @@
+import javax.imageio.plugins.tiff.TIFFTag;
+
 public class ArgsDemo {
     public IntList(int f, IntList r) {
         first = f;
@@ -38,6 +40,44 @@ public class ArgsDemo {
         return rest.get(i - 1);
     }
 
+//more exercise
+    public static IntList incrList(IntList L, int x) {
+        IntList Q = new IntList();
+        IntList T = Q;
+        IntList K = L;
+        while (K != null) {
+            T.first = K.first + x;
+            if (K.rest == null) {
+                Q.rest = null;
+            }
+            else {
+                Q.rest = new IntList();
+                Q = Q.rest;
+            }
+            K = K.rest;
+        }
+    }
+
+    public static IntList incrList(IntList L, int x) {
+        IntList Q = new IntList();
+        IntList T = Q;
+        IntList K = L;
+        T.first = K.first + x;
+        while (K.rest != null) {
+            T.rest = new IntList();
+            T.rest.first = K.rest.first + x;
+            T = T.rest;
+            K = K.rest;
+        }
+    }
+//recursive
+    public static IntList dincrList(IntList L, int x) {
+        IntList Q = L;
+        IntList T = Q;
+        while (T != null) {
+            T.first += x;
+            T = T.rest;
+        }
     }
     public static void main(String[] args) {
         System.out.println(args[0]);
