@@ -76,6 +76,10 @@ public class IntList {
         }
         return q;
     }
+
+    public void addfirst(IntList l) {
+        rest = l;
+    }
     public static void main(String[] args) {
         IntList l = new IntList(5, null);
         l.rest = new IntList(7, null);
@@ -86,16 +90,23 @@ public class IntList {
         q = new IntList(10, q);
         q = new IntList(5, q);
         
-        System.out.println(l.size());
-        System.out.println(l.iterativeSize());
+        // System.out.println(l.size());
+        // System.out.println(l.iterativeSize());
+
+        IntList m = new IntList(1, null);
+        System.out.println(m.size());
+        m.addfirst(q);
+        System.out.println(m.size());
 
         //see how this data structute of IntList can change size
         //add new elements to its back
         l.rest.rest.rest = new IntList(11, null);
 
-        System.out.println(l.get(l.size() - 1));
-        System.out.println(incrList(l, 3).first);
-        System.out.println(dincrList(l, 3).first);
+        // System.out.println(l.get(l.size() - 1));
+        // System.out.println(incrList(l, 3).first);
+        // System.out.println(dincrList(l, 3).first);
+
+
     }
 }
 

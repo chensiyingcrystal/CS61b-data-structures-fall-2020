@@ -1,0 +1,27 @@
+p {
+  color: pink;
+}
+
+html {
+    background-color: aqua;
+}
+
+body {
+    width: 800px;
+    margin: 20px auto;
+    background-color: #FF9500;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black;
+  }
+
+h1 {
+margin: 0;
+padding: 20px 0;
+color: #00539F;
+text-shadow: 3px 3px 1px black;
+}
+
+img {
+    display: block;
+    margin: 5px auto;
+  }
