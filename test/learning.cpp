@@ -45,8 +45,26 @@ int main() {
     // cout << sum << endl;
     // return sum;
 
-    signed char c = -1;
-    int i = c;
-    cout << i << endl;
+    int a = 10;
+    // int &b; //error: declaration of reference variable 'b' requires an initializer
+    int &b = a;
+    b = 2;
+    a--;
+    cout << b << endl;
+    int c = b;
+
+    b = c; //不能rebind,不会显示语法错误，但是b还是refer to a
+    c++;
+    cout << a << endl;
+    cout << c << endl;
+    cout << b << endl;
+
+    int *p = &a;
+    int *q = p;
+    cout << p << endl;
+    cout << q << endl;  
+
+
+    
 
 }
