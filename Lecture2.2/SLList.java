@@ -82,7 +82,8 @@ public class SLList {
 
     public void addLast(int x) {
         size += 1;
-
+        
+        //don't have to worry about if the first is a null
         IntNode p = sentinel;
         //advance p to the end of the list
         while (p.next != null) {
@@ -114,6 +115,13 @@ public class SLList {
         return size;
     }
     
+    //summarize: invariant
+    /** An SLList with a sentinel node :
+     * An invariant is a condition that is guaranteed to be true during code execution
+     * sentinel reference always points to a sentinel node
+     * The first node always at sentinel.next
+     * The size variable is always the total number of items that have been added
+     */
     public static void main(String[] args) {
         SLList L = new SLList(15);
         L.addFirst(10);
